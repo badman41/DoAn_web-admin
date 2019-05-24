@@ -1,0 +1,194 @@
+.ant-layout-header {
+  height: 80px!important;
+  line-height: inherit!important;
+  background: #439f46!important;
+}
+.ant-layout-sider {
+  background: #439f46!important;
+}
+.ant-layout-sider .ant-menu-inline {
+  border-right: none!important;
+}
+.ant-layout-sider .ant-menu {
+  background: #439f46!important;
+  color: white;
+}
+.ant-layout-sider .ant-menu .ant-menu-submenu-title .icon-menu {
+  line-height: 42px;
+}
+.ant-layout-sider .ant-menu .ant-menu-submenu-title .icon-menu img {
+  float: left;
+  padding-top: 6px;
+  padding-right: 5px;
+}
+.ant-layout-sider .ant-menu .ant-menu-inline {
+  border-right: none!important;
+}
+.ant-layout-sider .ant-menu .ant-menu-item-selected {
+  background: #439f46!important;
+  color: white!important;
+}
+.ant-layout-sider .ant-menu .ant-menu-item:active {
+  background: #439f46!important;
+}
+.ant-layout-sider .ant-menu .ant-menu-item-selected::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-right: 15px solid white;
+  /* Tam giác phải được đổ màu */
+}
+.ant-layout-sider .ant-menu .ant-menu-item a {
+  color: white;
+}
+.header {
+  display: inline-block;
+  width: 100%;
+  padding-top: 5px;
+  height: 80px;
+  padding-bottom: 5px;
+}
+.header .logo {
+  display: inline-block;
+  float: left;
+  height: 70px;
+}
+.header .logo img {
+  height: 70px;
+}
+.header .user-info {
+  padding-top: 5px;
+  display: inline-block;
+  line-height: 60px;
+  float: right;
+}
+.header .user-info .user-avatar {
+  float: left;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.header .user-info .user-avatar img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.header .user-info .ant-dropdown-link {
+  font-weight: bold;
+  color: white;
+}
+.them-phuong-tien {
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+}
+.them-phuong-tien .ant-form-item-label {
+  text-align: left;
+}
+.them-phuong-tien .ant-form-item-label label::after {
+  content: "";
+}
+.them-phuong-tien .ant-form-item-control textarea {
+  min-height: 100px;
+}
+.them-phuong-tien table tr td {
+  padding-right: 20px;
+}
+.them-phuong-tien .ant-btn-primary {
+  color: #439f46!important;
+  border-color: #439f46!important;
+}
+.them-phuong-tien .ant-btn-primary:hover {
+  color: white!important;
+  background: #439f46!important;
+}
+.xem-danh-sach-phuong-tien {
+  padding-top: 30px;
+  min-height: 600px;
+}
+.xem-danh-sach-phuong-tien .ant-pagination-item-active {
+  background: #439f46;
+  border-color: #439f46;
+}
+.xem-danh-sach-phuong-tien .footer-search-pt {
+  width: auto;
+}
+.xem-danh-sach-phuong-tien .footer-search-pt tr .search-tr {
+  width: 180px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.xem-danh-sach-phuong-tien .footer-search-pt tr .search-tr input {
+  border-radius: 20px;
+}
+.xem-danh-sach-phuong-tien table .ant-table-thead tr th {
+  background: #439f46;
+  color: white;
+}
+.xem-danh-sach-phuong-tien table tbody tr td .sua-pt {
+  color: #fbbc0a;
+  border-color: #fbbc0a;
+  margin-right: 10px;
+}
+.xem-danh-sach-phuong-tien table tbody tr td .xem-pt {
+  color: #439f46;
+  border-color: #439f46;
+  margin-right: 10px;
+}
+.xem-danh-sach-phuong-tien .search-phuong-tien {
+  margin-bottom: 30px;
+}
+.xem-danh-sach-phuong-tien .search-phuong-tien .ant-col-12 input {
+  border-radius: 20px;
+}
+.xem-danh-sach-phuong-tien .search-phuong-tien .title-search {
+  text-align: right;
+}
+.xem-danh-sach-phuong-tien .search-phuong-tien .title-search span {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+.started_date {
+  width: 800px!important;
+  top: 50px!important;
+}
+.started_date .table-lich {
+  border-collapse: collapse;
+  width: 100%;
+}
+.started_date .table-lich td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.started_date .table-lich .gio-lam-viec {
+  width: 140px;
+}
+.started_date .table-lich .gio-lam-viec .gio-lam-viec-a {
+  width: 100%;
+  display: inline-block;
+}
+.started_date .table-lich .gio-lam-viec .gio-lam-viec-a span {
+  margin-right: 10px;
+}
+.started_date .table-lich .gio-lam-viec .gio-lam-viec-a input {
+  width: 60px;
+  float: right;
+  height: 20px;
+}
+.xem-phuong-tien {
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+  min-height: 600px;
+}
+.xem-phuong-tien table tr td {
+  padding: 10px 20px;
+}

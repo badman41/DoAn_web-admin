@@ -1,0 +1,36 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 7
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "indent": ["error", 2],
+    "no-shadow": "off",
+    "max-len": "off",
+    "react/destructuring-assignment": "off",
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
+    "semi": [2, "never"],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "only-multiline"]
+  },
+  "globals": {
+    "localStorage": true,
+    "EventSource": true,
+    "FormData": true,
+    "document": true,
+    "window": true
+  }
+}
