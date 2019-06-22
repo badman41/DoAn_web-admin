@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import {withRouter} from 'react-router-dom'
 
-import { Form, Input, Select, Button, Row, Col, InputNumber } from 'antd'
+import { Form, Input, Select, Button, Row, Col, InputNumber, Modal } from 'antd'
 import ToJS from '../../../hoc/toJs'
 
 const { Item } = Form
@@ -13,7 +14,7 @@ class VehicleForm extends Component {
     e.preventDefault()
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        const { Code, TypeID, Name, LicensePlate, DriverID, MaxLoad, Width, Height, Length, Note } = values
+        const { Code, TypeID, Name, LicensePlate, DriverID, MaxLoad, Width, Height, Length, Note } = values;
         this.props.onSubmit({
           Code,
           TypeID,
@@ -66,7 +67,7 @@ class VehicleForm extends Component {
                   },
                 ],
               })(
-                <Select placeholder="Chọn kiểu" onChange={this.onChangeType}>
+                <Select placeholder="Chọn kiểu">
                   {typeVehicle
                     ? typeVehicle.map((item, index) => (
                       <Option value={item.ID} key={`${index + 1}`}>
@@ -88,7 +89,7 @@ class VehicleForm extends Component {
                     message: 'Hãy nhập mã phương tiện',
                   },
                 ],
-              })(<Input type="text" />)}
+              })(<Input type="text" disabled={editMode} />)}
             </Item>
           </Col>
         </Row>
@@ -103,7 +104,7 @@ class VehicleForm extends Component {
                     message: 'Hãy nhập biển số xe',
                   },
                 ],
-              })(<Input type="text" onChange={this.onChangeLicensePlate} />)}
+              })(<Input type="text" />)}
             </Item>
           </Col>
           <Col span={12}>
@@ -116,7 +117,7 @@ class VehicleForm extends Component {
                     message: 'Hãy nhập tên xe',
                   },
                 ],
-              })(<Input type="text" disabled />)}
+              })(<Input type="text" />)}
             </Item>
           </Col>
         </Row>
@@ -178,8 +179,8 @@ class VehicleForm extends Component {
           {getFieldDecorator('Note', { initialValue: editMode ? vehicle.Note : '' })(<TextArea type="text" />)}
         </Item>
 
-        <Item style={{ float: 'right' }}>
-          <Button type="primary" htmlType="submit">
+        <Item>
+          <Button style={{ float: 'right' }} type="primary" htmlType="submit">
             {editMode ? 'Hoàn thành' : 'Thêm phương tiện'}
           </Button>
         </Item>

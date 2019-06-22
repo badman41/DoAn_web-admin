@@ -101,7 +101,7 @@ class Driver extends Component {
         <Fragment>
           {!isEditting ? (
             <h3 style={{ fontWeight: 'bold' }}>
-              {driverInfo && `${driverInfo.Name} (${driverInfo.PhoneNumber})`}
+                 {driverInfo && `${driverInfo.Name} - ${driverInfo.Code}`}
               <Button
                 shape="circle"
                 icon="edit"
@@ -123,7 +123,7 @@ class Driver extends Component {
               >
                 {drivers.map(driver => (
                   <Option key={driver.ID} value={driver.ID}>
-                    {driver.DriverInfo.Name}
+                      {driver.DriverInfo.Name} - {driver.DriverInfo.Code}
                   </Option>
                 ))}
               </Select>
@@ -179,13 +179,13 @@ const RouteList = ({ routes, viewDetail, onUpdateDriver, drivers }) => {
       sort: (a, b) => a.Customers.length - b.Customers.length,
       defaultSortOrder: 'descend',
     },
-    {
-      title: 'Trạng thái',
-      dataIndex: 'RouteStatus',
-      render: (text, route) => ROUTE_STATUS[route.RouteStatus],
-      sort: (a, b) => a.RouteStatus - b.RouteStatus,
-      defaultSortOrder: 'descend',
-    },
+    // {
+    //   title: 'Trạng thái',
+    //   dataIndex: 'RouteStatus',
+    //   render: (text, route) => ROUTE_STATUS[route.RouteStatus],
+    //   sort: (a, b) => a.RouteStatus - b.RouteStatus,
+    //   defaultSortOrder: 'descend',
+    // },
     {
       title: 'Chi tiết',
       dataIndex: 'detail',

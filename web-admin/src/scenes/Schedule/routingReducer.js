@@ -43,8 +43,11 @@ const routingReducer = (state = initialState, action) => {
   case TYPES.SOLVE_VRP_FAILURE:
     return state.merge({ isFetching: false })
   case TYPES.UPDATE_ROUTES:
+      console.log("update")
+      var totalDistance = Math.floor(action.payload.map(item => item.distance).reduce((a, b) => a + b))
+      var totalDuration = Math.floor(action.payload.map(item => item.duration).reduce((a, b) => a + b))
     return state.merge({
-      solution: { routes: action.payload },
+      solution: { routes: action.payload, distance: totalDistance, duration: totalDuration},
       isFetching: false,
     })
   case TYPES.SET_NODE_POOL:

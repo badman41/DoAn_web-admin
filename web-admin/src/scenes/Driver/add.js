@@ -67,7 +67,7 @@ class AddDriverPage extends React.Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://docs.google.com/spreadsheets/d/1EktwtKGhhblKWVowUsMcVS2HeSE3o1kUI5kClp-8SUc/edit?usp=sharing"
+                    href="https://docs.google.com/spreadsheets/d/1j2fsnhblp5Vpl409VDrYu1ByIF9fy5SVs3hb3UUY6_E/edit?usp=sharing"
                   >
                     Mẫu file excel
                   </a>

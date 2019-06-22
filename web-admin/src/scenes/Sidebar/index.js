@@ -74,11 +74,11 @@ class MenuBar extends React.Component {
                 <span style={{ marginLeft: '10px' }}>Lịch giao vận</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="routes">
+            {/* <Menu.Item key="routes">
               <Link to={ROUTER.ROUTE.INDEX}>
                 <span style={{ marginLeft: '10px' }}>Tuyến đường</span>
               </Link>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="routing-vrp">
               <Link to={ROUTER.ROUTING.VRP}>
                 <span style={{ marginLeft: '10px' }}>Định tuyến</span>

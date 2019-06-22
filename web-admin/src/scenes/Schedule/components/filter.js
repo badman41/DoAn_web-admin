@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Select, Input, Button, DatePicker, Form, Row, Col } from 'antd'
+import { Input, Button, DatePicker, Form, Row, Col } from 'antd'
 
-const { Option } = Select
+
 const { Item } = Form
 
 class FilterRow extends React.Component {
@@ -53,7 +53,7 @@ class FilterRow extends React.Component {
             )
           }
         </Item>
-        <Item label="Loại lịch">
+        {/* <Item label="Loại lịch">
           {
             getFieldDecorator('Type', { initialValue: 0 })(
               <Select
@@ -70,7 +70,7 @@ class FilterRow extends React.Component {
               </Select>,
             )
           }
-        </Item>
+        </Item> */}
         <Row gutter={24}>
           <Col span={12}>
             <Button icon="filter" disabled={disabled} type="primary" htmlType="submit" style={{ width: '100%' }}>

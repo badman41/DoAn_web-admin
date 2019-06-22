@@ -31,12 +31,12 @@ const SolutionCard = ({ solution }) => (
           data={moment(solution.DeliveredAt).format('DD/MM/YYYY')}
         />
 
-        <InfoField
+        {/* <InfoField
           label="Loại lịch"
           data={
             solution.RouteManagerType === 0 ? 'lịch thường' : 'lịch mẫu'
           }
-        />
+        /> */}
         <InfoField
           label="Số lượng khách hàng"
           data={solution.NumberOfCustomers}

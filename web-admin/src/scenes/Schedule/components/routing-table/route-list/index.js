@@ -10,7 +10,7 @@ const RouteList = ({
   onSwapNodes,
 }) => (
   <Fragment>
-    {routes.map((route, routeIndex) => (
+     {routes.map((route, routeIndex) => {console.log(route); return (
       <div
         key={`${routeIndex + 1}`}
         style={{
@@ -53,7 +53,7 @@ const RouteList = ({
           />
         </div>
       </div>
-    ))}
+    );})}
   </Fragment>
 )
 

@@ -67,9 +67,9 @@ class Schedule extends React.Component {
         <Row gutter={24}>
           <Col span={6}><Filter onFilter={this.handleFilter} /></Col>
           <Col span={18}>
-            <Button icon="plus" onClick={this.openUploadForm}>
+            {/* <Button icon="plus" onClick={this.openUploadForm}>
               {'Thêm tuyến mẫu'}
-            </Button>
+            </Button> */}
             <ScheduleList
               schedules={schedules}
               isFetching={isFetching}

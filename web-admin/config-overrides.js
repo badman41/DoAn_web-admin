@@ -26,6 +26,16 @@ module.exports = {
           target: 'https://avf.dev.anfast.com.vn',
           changeOrigin: true,
         },
+        '/transition':{
+          target: 'https://localhost:5001/',
+          secure: false,
+          changeOrigin: true,
+        },
+        '/vrp':{
+          target: 'http://localhost:18000',
+          secure: false,
+          changeOrigin: true,
+        },
         '/orderApi': {
           target: 'https://[::1]:44309',
           secure: false

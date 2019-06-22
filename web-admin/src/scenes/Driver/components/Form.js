@@ -93,7 +93,7 @@ class DriverForm extends Component {
                     message: 'Nhập mã lái xe',
                   },
                 ],
-              })(<Input type="text" placeholder="Mã lái xe" />)}
+              })(<Input type="text" placeholder="Mã lái xe" disabled={editMode} />)}
             </Item>
           </Col>
           <Col span={12}>

@@ -12,7 +12,7 @@ const columns = [
   {
     title: 'STT',
     dataIndex: 'Index',
-    render: (t, r, index) => index,
+    render: (t, r, index) => index+1,
   },
   {
     title: 'Tên hàng hóa',

@@ -47,7 +47,7 @@ class PrepareInvoice extends Component {
           <Col span={12}>
             <InvoiceFilterForm onSubmit={this.filterInvoices} />
           </Col>
-          <Col span={12}>
+          <Col span={12} hidden={true}>
             <MethodForm isVrp={isVrp} onChangeMethod={onChangeMethod} />
           </Col>
         </Row>

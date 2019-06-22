@@ -12,8 +12,8 @@ class ResetForm extends React.Component {
     } = this.props
     return (
       <Form>
-        <FormItem label="Mã lái xe">
-          {getFieldDecorator('DriverID', { initialValue: driver.ID })(<Input />)}
+        <FormItem label="Mã lái xe (username)">
+          {getFieldDecorator('DriverID', { initialValue: driver.DriverInfo.Code })(<Input disabled />)}
         </FormItem>
         <FormItem label="Tên lái xe">
           {getFieldDecorator('DriverName', { initialValue: driver.DriverInfo.Name })(<Input />)}

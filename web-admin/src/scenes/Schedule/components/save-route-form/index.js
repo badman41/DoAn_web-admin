@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Form, Input, Button, Checkbox } from 'antd'
+import { Form, Input, Button, } from 'antd'
 import moment from 'moment'
 import ToJs from '../../../../hoc/toJs'
 
@@ -29,28 +29,31 @@ class SaveRouteForm extends Component {
                   message: 'Hãy nhập tên!',
                 },
               ],
-            })(<Input disabled />)}
+            })(<Input />)}
           </FormItem>
           <FormItem label="Ghi chú">{getFieldDecorator('note')(<TextArea rows={4} />)}</FormItem>
-          <FormItem label="Ghi chú">
+          {/* <FormItem label="Ghi chú">
             {getFieldDecorator('routeType', {
               valuePropName: 'checked',
               initialValue: false,
             })(<Checkbox>Tuyến mẫu</Checkbox>)}
-          </FormItem>
+          </FormItem> */}
           <FormItem label="Tổng thời gian">
             {getFieldDecorator('duration', {
               initialValue: solution.duration
                 ? Math.floor(solution.duration)
-                : solution.duration && solution.routes.map(item => item.duration).reduce((a, b) => a + b),
+                : Math.floor(solution.duration)
+                // : solution.duration && solution.routes.map(item => item.duration).reduce((a, b) => a + b),
             })(<Input disabled />)}
           </FormItem>
           <FormItem label="Tổng quãng đường (km)">
             {getFieldDecorator('distance', {
               initialValue: solution.distance
                 ? Math.floor(solution.distance) / 1000
-                : solution.distance
-                              && solution.routes.map(item => item.distance).reduce((a, b) => a + b) / 1000,
+                : Math.floor(solution.distance) / 1000
+                // ? Math.floor(solution.distance) / 1000
+                // : solution.distance
+                //               && solution.routes.map(item => item.distance).reduce((a, b) => a + b) / 1000,
             })(<Input disabled />)}
           </FormItem>
           <FormItem label="Số khách hàng">

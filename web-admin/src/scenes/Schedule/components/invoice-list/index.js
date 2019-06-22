@@ -14,7 +14,7 @@ const InvoiceList = ({ invoices, selectedInvoices, onSelectInvoices, onView }) =
     getCheckboxProps: record => ({
       disabled:
         record.WeightTotal > 200
-        || record.Status.Status !== 0
+        || record.Status !== 0
         || !(record.Address && record.Address.Lat && record.Address.Lng),
     }),
   }
@@ -51,10 +51,10 @@ const InvoiceList = ({ invoices, selectedInvoices, onSelectInvoices, onView }) =
       dataIndex: 'Status',
       render: (text, record) => ({
         props: { style: { backgroundColor: record.Status === 0 ? '' : 'whitesmoke' } },
-        children: INVOICE_STATUS[record.Status.Status],
+        children: INVOICE_STATUS[record.Status],
       }),
       defaultSortOrder: 'descend',
-      sorter: (a, b) => a.Status.Status - b.Status.Status,
+      sorter: (a, b) => a.Status - b.Status,
     },
     {
       title: 'Hành động',

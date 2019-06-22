@@ -42,7 +42,11 @@ class AddVehicle extends React.Component {
         notification.success({ message: 'Thêm phương tiện thành công ' })
         this.props.history.push(ROUTER.VEHICLE.INDEX)
       },
-      onError: () => notification.error({ message: 'Thêm phương tiện thất bại' }),
+      onError: (error) => {
+        console.log(error)
+        notification.error({ message: `Thêm phương tiện thất bại` })
+        this.props.history.push(ROUTER.VEHICLE.INDEX)
+      } 
     })
   };
 
@@ -69,7 +73,7 @@ class AddVehicle extends React.Component {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://docs.google.com/spreadsheets/d/1FmSIw-RIaby3tCQ6esUwDotSnbt7v3MPDe-YOSMbab8/edit?usp=sharing"
+                    href="https://docs.google.com/spreadsheets/d/1Woc6UXPKngA9eKBxXe6k9zBEsPNZSwyiKKT2BJl4fm4/edit?usp=sharing"
                   >
                     Mẫu file excel
                   </a>

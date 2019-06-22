@@ -29,8 +29,13 @@ export const API = {
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // resetPassword: () => ({
+    //   endPoint: '/api/account/v1/users/resetpassword',
+    //   method: 'PUT',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     resetPassword: () => ({
-      endPoint: '/api/account/v1/users/resetpassword',
+      endPoint: '/transition/Driver/ResetPassword',
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
@@ -67,45 +72,85 @@ export const API = {
     }),
   },
   VEHICLE: {
+    // getVehicles: () => ({
+    //   endPoint: '/api/vehicle/v1/vehicles',
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getVehicles: () => ({
-      endPoint: '/api/vehicle/v1/vehicles',
+      endPoint: '/transition/Vehicle',
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // getVehicle: id => ({
+    //   endPoint: `/api/vehicle/v1/vehicles/${id}`,
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getVehicle: id => ({
-      endPoint: `/api/vehicle/v1/vehicles/${id}`,
+      endPoint: `/transition/Vehicle/${id}/edit`,
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // insertVehicle: () => ({
+    //   endPoint: '/api/vehicle/v1/vehicles',
+    //   method: 'POST',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     insertVehicle: () => ({
-      endPoint: '/api/vehicle/v1/vehicles',
+      endPoint: '/transition/Vehicle',
       method: 'POST',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // updateVehicle: id => ({
+    //   endPoint: `/api/vehicle/v1/vehicles/${id}`,
+    //   method: 'PUT',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     updateVehicle: id => ({
-      endPoint: `/api/vehicle/v1/vehicles/${id}`,
+      endPoint: `/transition/Vehicle/${id}`,
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // deleteVehicle: id => ({
+    //   endPoint: `/api/vehicle/v1/vehicles/${id}`,
+    //   method: 'DELETE',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     deleteVehicle: id => ({
-      endPoint: `/api/vehicle/v1/vehicles/${id}`,
+      endPoint: `/transition/Vehicle/${id}`,
       method: 'DELETE',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // importFromExcel: () => ({
+    //   endPoint: '/api/vehicle/v1/vehicles/import/by_excel',
+    //   method: 'POST',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     importFromExcel: () => ({
-      endPoint: '/api/vehicle/v1/vehicles/import/by_excel',
+      endPoint: '/transition/Vehicle/UploadFile',
       method: 'POST',
       headers: HEADERS.JWT_HEADER(),
     }),
   },
   VEHICLE_TYPE: {
+    // getVehicleTypes: () => ({
+    //   endPoint: '/api/vehicle/v1/vehicles-type',
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getVehicleTypes: () => ({
-      endPoint: '/api/vehicle/v1/vehicles-type',
+      endPoint: '/transition/VehicleType',
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // insertVehicleType: () => ({
+    //   endPoint: '/api/vehicle/v1/vehicles-type',
+    //   method: 'POST',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     insertVehicleType: () => ({
-      endPoint: '/api/vehicle/v1/vehicles-type',
+      endPoint: '/transition/VehicleType',
       method: 'POST',
       headers: HEADERS.JWT_HEADER(),
     }),
@@ -114,8 +159,13 @@ export const API = {
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // deleteVehicleType: id => ({
+    //   endPoint: `/api/vehicle/v1/vehicles-type/${id}`,
+    //   method: 'DELETE',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     deleteVehicleType: id => ({
-      endPoint: `/api/vehicle/v1/vehicles-type/${id}`,
+      endPoint: `/transition/VehicleType/${id}`,
       method: 'DELETE',
       headers: HEADERS.JWT_HEADER(),
     }),
@@ -345,28 +395,53 @@ export const API = {
     }),
   },
   DRIVER: {
+    // getAllDrivers: () => ({
+    //   endPoint: '/api/driver/v1/drivers',
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getAllDrivers: () => ({
-      endPoint: '/api/driver/v1/drivers',
+      endPoint: 'transition/Driver',
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // getDrivers: () => ({
+    //   endPoint: '/api/driver/v1/drivers',
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getDrivers: () => ({
-      endPoint: '/api/driver/v1/drivers',
+      endPoint: '/transition/Driver',
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // getDriver: id => ({
+    //   endPoint: `/api/driver/v1/drivers/${id}`,
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getDriver: id => ({
-      endPoint: `/api/driver/v1/drivers/${id}`,
+      endPoint: `/transition/Driver/${id}`,
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // insertDriver: () => ({
+    //   endPoint: '/api/driver/v1/drivers',
+    //   method: 'POST',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     insertDriver: () => ({
-      endPoint: '/api/driver/v1/drivers',
+      endPoint: '/transition/Driver',
       method: 'POST',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // updateDriver: id => ({
+    //   endPoint: `/api/driver/v1/drivers/${id}`,
+    //   method: 'PUT',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     updateDriver: id => ({
-      endPoint: `/api/driver/v1/drivers/${id}`,
+      endPoint: `/transition/Driver/${id}`,
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
@@ -375,13 +450,23 @@ export const API = {
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // deleteDriver: id => ({
+    //   endPoint: `/api/driver/v1/drivers/${id}`,
+    //   method: 'DELETE',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     deleteDriver: id => ({
-      endPoint: `/api/driver/v1/drivers/${id}`,
+      endPoint: `/transition/Driver/${id}`,
       method: 'DELETE',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // importFromExcel: () => ({
+    //   endPoint: '/api/driver/v1/import/by_excel',
+    //   method: 'POST',
+    //   headers: HEADERS.file_header(),
+    // }),
     importFromExcel: () => ({
-      endPoint: '/api/driver/v1/import/by_excel',
+      endPoint: '/transition/Driver/UploadFile',
       method: 'POST',
       headers: HEADERS.file_header(),
     }),
@@ -437,11 +522,21 @@ export const API = {
     }),
   },
   ROUTING: {
+    // solve: () => ({
+    //   endPoint: `${process.env.REACT_APP_SOLVER_API}/vrpsolver/api/v1/vrp`,
+    //   method: 'POST',
+    //   headers: HEADERS.DEFAULT_HEADER,
+    // }),
     solve: () => ({
       endPoint: `${process.env.REACT_APP_SOLVER_API}/vrpsolver/api/v1/vrp`,
       method: 'POST',
       headers: HEADERS.DEFAULT_HEADER,
     }),
+    // updateSolution: () => ({
+    //   endPoint: `${process.env.REACT_APP_SOLVER_API}/vrpsolver/api/v1/routes/calculation`,
+    //   method: 'POST',
+    //   headers: HEADERS.DEFAULT_HEADER,
+    // }),
     updateSolution: () => ({
       endPoint: `${process.env.REACT_APP_SOLVER_API}/vrpsolver/api/v1/routes/calculation`,
       method: 'POST',
@@ -468,13 +563,24 @@ export const API = {
     }),
   },
   SCHEDULE: {
+    // getSchedules: () => ({
+    //   endPoint: '/api/route-manager/v1/routesmanager',
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     getSchedules: () => ({
-      endPoint: '/api/route-manager/v1/routesmanager',
+      endPoint: '/transition/Schedule',
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // getSchedule: (id, payload) => ({
+    //   endPoint: `/api/route-manager/v1/routesmanager/${id}`,
+    //   method: 'GET',
+    //   headers: HEADERS.JWT_HEADER(),
+    //   payload,
+    // }),
     getSchedule: (id, payload) => ({
-      endPoint: `/api/route-manager/v1/routesmanager/${id}`,
+      endPoint: `/transition/Schedule/${id}`,
       method: 'GET',
       headers: HEADERS.JWT_HEADER(),
       payload,
@@ -489,8 +595,13 @@ export const API = {
       method: 'PUT',
       headers: HEADERS.JWT_HEADER(),
     }),
+    // deleteSchedule: id => ({
+    //   endPoint: `/api/route-manager/v1/routesmanager/${id}`,
+    //   method: 'DELETE',
+    //   headers: HEADERS.JWT_HEADER(),
+    // }),
     deleteSchedule: id => ({
-      endPoint: `/api/route-manager/v1/routesmanager/${id}`,
+      endPoint: `/transition/Schedule/${id}`,
       method: 'DELETE',
       headers: HEADERS.JWT_HEADER(),
     }),
